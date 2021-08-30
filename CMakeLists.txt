@@ -66,7 +66,7 @@ endif()
 ######## conan setup
 # include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 # conan_basic_setup(TARGETS)
-
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
 set(TARGET_NAME corrade)
 add_library(${TARGET_NAME})
