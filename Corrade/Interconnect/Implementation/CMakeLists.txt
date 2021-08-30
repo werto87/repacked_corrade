@@ -1,3 +1,3 @@
-target_sources(${TARGET_NAME} PRIVATE 
+target_sources(${TARGET_NAME} PRIVATE
 ReceiverConnection.h
 )

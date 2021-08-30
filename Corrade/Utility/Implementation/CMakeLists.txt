@@ -1,13 +1,8 @@
-target_sources(${TARGET_NAME} PRIVATE 
-tweakable.h
+target_sources(${TARGET_NAME} PRIVATE
+WindowsError.h
 Resource.h
+WindowsError.cpp
+WindowsWeakSymbol.cpp
+tweakable.h
+WindowsWeakSymbol.h
 )
-
-if(CORRADE_TARGET_WINDOWS)
-    target_sources(${TARGET_NAME} PRIVATE
-    WindowsError.cpp
-    WindowsWeakSymbol.cpp
-    WindowsError.h
-    WindowsWeakSymbol.h
-    )
-endif()

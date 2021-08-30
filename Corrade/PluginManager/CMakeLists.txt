@@ -1,18 +1,12 @@
-target_sources(${TARGET_NAME} PRIVATE 
+target_sources(${TARGET_NAME} PRIVATE
+AbstractManager.h
+Manager.h
+AbstractPlugin.h
+PluginManager.h
+AbstractPlugin.cpp
+PluginMetadata.h
+PluginMetadata.cpp
+visibility.h
 AbstractManager.cpp
 AbstractManagingPlugin.h
-AbstractPlugin.h
-Manager.h
-PluginMetadata.cpp 
-visibility.h
-AbstractManager.h
-AbstractPlugin.cpp
-PluginManager.h
-PluginMetadata.h
 )
-
-
-
-
-
-
