@@ -64,8 +64,8 @@ endif()
 # include(cmake/StaticAnalyzers.cmake) 
  
 ######## conan setup
-include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
-conan_basic_setup(TARGETS)
+# include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
+# conan_basic_setup(TARGETS)
 
 
 set(TARGET_NAME corrade)
