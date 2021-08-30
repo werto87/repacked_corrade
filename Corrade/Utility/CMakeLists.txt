@@ -35,7 +35,6 @@ FormatStl.h
 Assert.h
 Debug.cpp
 StlForwardVector.h
-AndroidLogStreamBuffer.h
 StlForwardString.h
 ConfigurationGroup.cpp
 Tweakable.h
@@ -43,7 +42,6 @@ ConfigurationValue.h
 Configuration.cpp
 Sha1.h
 EndiannessBatch.h
-AndroidLogStreamBuffer.cpp
 Macros.h
 ConfigurationValue.cpp
 MurmurHash2.cpp
@@ -56,4 +54,14 @@ Arguments.h
 StlForwardTuple.h
 Unicode.h
 )
+
+if(CORRADE_TARGET_ANDROID)
+    target_sources(${TARGET_NAME} PRIVATE
+    AndroidLogStreamBuffer.cpp
+    AndroidLogStreamBuffer.h
+    )
+    
+endif()
+
+
 add_subdirectory(Implementation)
