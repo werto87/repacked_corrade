@@ -70,6 +70,12 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib)
 
 set(TARGET_NAME corrade)
 add_library(${TARGET_NAME})
+set_target_properties(${TARGET_NAME}
+    PROPERTIES
+    ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
+    LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/lib
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin
+)
 target_compile_definitions(${TARGET_NAME} PRIVATE CORRADE_PLUGINMANAGER_NO_DYNAMIC_PLUGIN_SUPPORT)
 add_subdirectory(Corrade)
 ######## add sub dir
@@ -92,7 +98,7 @@ ${PROJECT_OPTIONS}
 
 if (CORRADE_TARGET_UNIX OR CORRADE_TARGET_WINDOWS) 
   target_link_libraries(${TARGET_NAME} PRIVATE
-  -ldl
+  -ldl 
   )
 endif()
 
